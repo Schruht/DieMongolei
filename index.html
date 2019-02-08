@@ -37,7 +37,7 @@
             var m = false
             $('#text-in').on('input', (event) => {
                 let text = $('#text-in').val()
-                if (text.toLowerCase().split(' ').join('') == "mongolei" || text.toLowerCase().split(' ').join('') == "diemongolei") {
+                if (/^(nicht nicht )*(die )?mongolei/.test(text)) {
                     $('#text-out').html("ist die Mongolei.")
                 } else {
                     $('#text-out').html("ist nicht die Mongolei.")
