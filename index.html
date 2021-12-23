@@ -1,5 +1,6 @@
 <html>
     <head>
+        <meta charset="utf-8">
             <script
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -37,7 +38,7 @@
             var m = false
             $('#text-in').on('input', (event) => {
                 let text = $('#text-in').val()
-                if (/^(nicht nicht )*(die )?mongolei/.test(text)) {
+                if (/^((nicht nicht )*(die )?mongolei)|(das land über china)|(das land unter russland)|(das land neben kaschstan)/.test(text.toLowerCase())) {
                     $('#text-out').html("ist die Mongolei.")
                 } else {
                     $('#text-out').html("ist nicht die Mongolei.")
