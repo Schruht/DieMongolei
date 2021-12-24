@@ -1,52 +1,52 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-            <script
-            src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"></script>
-            <style>
-                .main-container {
-                    display: flex;
-                    justify-content: center;
-                    width: 100%;
-                    height: 100%;
-                    align-items: center;
-                }
-                #text-in {
-                    height: 30px;
-                    margin-right: 10px;
-                    border: none;
-                    border-bottom: 1px solid #CCCCCC;
-                }
-                #text-in:focus {
-                    outline: none;
-                    border-bottom: 1px solid #42a7f4;
-                }
-                #text-out {
-                    font-family: sans-serif;
-                    font-size: 13px;
-                }
-            </style>
-    </head>
-    <body>
-        <div class="main-container">
-            <input type="text" id="text-in">
-            <div class="out" id="text-out"></div>
-        </div>
-        <script>
-            var m = false
-            $('#text-in').on('input', (event) => {
-                let text = $('#text-in').val()
-                if (/^((nicht nicht )*(die )?mongolei)|(das land über china)|(das land unter russland)|(das land neben kaschstan)/.test(text.toLowerCase())) {
-                    $('#text-out').html("ist die Mongolei.")
-                } else {
-                    $('#text-out').html("ist nicht die Mongolei.")
-                }
-                if (text == "") {
-                    $('#text-out').html("")
-                }
-            })
-        </script>
-    </body>
+	<head>
+		<meta charset="utf-8">
+			<script
+			src="https://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous"></script>
+			<style>
+				.main-container {
+					display: flex;
+					justify-content: center;
+					width: 100%;
+					height: 100%;
+					align-items: center;
+				}
+				#text-in {
+					height: 30px;
+					margin-right: 10px;
+					border: none;
+					border-bottom: 1px solid #CCCCCC;
+				}
+				#text-in:focus {
+					outline: none;
+					border-bottom: 1px solid #42a7f4;
+				}
+				#text-out {
+					font-family: sans-serif;
+					font-size: 13px;
+				}
+			</style>
+	</head>
+	<body>
+		<div class="main-container">
+			<input type="text" id="text-in">
+			<div class="out" id="text-out"></div>
+		</div>
+		<script>
+			var m = false
+			$('#text-in').on('input', (event) => {
+				let text = $('#text-in').val()
+				if (/^((nicht nicht )*(die )?mongolei)|(das land über china)|(das land unter russland)|(das land neben kaschstan)/.test(text.toLowerCase())) {
+					$('#text-out').html("ist die Mongolei.")
+				} else {
+					$('#text-out').html("ist nicht die Mongolei.")
+				}
+				if (text == "") {
+					$('#text-out').html("")
+				}
+			})
+		</script>
+	</body>
 </html>
