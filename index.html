@@ -38,7 +38,7 @@
 			var m = false
 			$('#text-in').on('input', (event) => {
 				let text = $('#text-in').val()
-				if (/^((nicht nicht )*(die )?mongolei)|(das land über china)|(das land unter russland)|(das land neben kaschstan)/.test(text.toLowerCase())) {
+				if (/^((nicht nicht )*(die )?mongolei)|(das land (nicht nicht )*(über china|unter russland|neben kasachstan))$/.test(text.toLowerCase())) {
 					$('#text-out').html("ist die Mongolei.")
 				} else {
 					$('#text-out').html("ist nicht die Mongolei.")
